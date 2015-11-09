@@ -1,0 +1,8 @@
+---
+
+- name: link vimrc
+  file: path=~/.vimrc state=link src={{filesdir}}/vimrc
+
+- name: get Vundle from github
+  git: repo=https://github.com/VundleVim/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim update=no
+  notify: install Vundle plugins

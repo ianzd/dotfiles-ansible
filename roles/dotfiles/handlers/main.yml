@@ -1,0 +1,4 @@
+---
+
+- name: install Vundle plugins
+  command: vim -c PluginInstall -c qa

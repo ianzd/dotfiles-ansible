@@ -1,0 +1,16 @@
+---
+
+
+- name: test existence of downloads dir
+  stat: path=~/Downloads
+  register: Downloads
+
+- name: create dl symlink
+  file: src=~/Downloads dest=~/dl state=link
+  when: Downloads.stat.exists == True
+
+- name: link some dotfiles
+  file: path={{item.key}} state=link src={{item.value.src}}
+  with_dict: dotfiles_base
+
+- include: vim.yml

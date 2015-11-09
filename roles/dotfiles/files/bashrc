@@ -1,0 +1,33 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+export EDITOR=vim
+
+# git aliases
+alias ga='git add'
+alias gc='git commit -v'
+alias gca='git commit -av'
+alias gd='git diff'
+alias gp='git push'
+alias gs='git status'
+alias gu='git pull'
+
+# check git status for directories in the pwd
+alias gsdirs='for d in $(ls); do echo ==== $d; (cd $d; git status); done'
+
+# Get current wx obs at UW ATG
+alias uwatgwx='curl -s http://www.atmos.washington.edu/cgi-bin/latest_uw.cgi | awk '\''NR>8 && NR<14'\'''
+
+# Set SSH_AUTH_SOCK to point to the most recently started ssh-agent process
+alias reset-authsock='export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name 'agent*' -user $USER | head -n1)'
+
+alias bc="bc ~/.bcrc"
+alias ll="ls -l"

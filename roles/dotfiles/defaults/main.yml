@@ -1,0 +1,11 @@
+---
+
+filesdir: "{{role_path}}/files"
+
+dotfiles_base:
+  ~/.bashrc:
+    src: "{{filesdir}}/bashrc"
+  ~/.bcrc:
+    src: "{{filesdir}}/bcrc"
+  ~/.config/xfce4/terminal/terminalrc:
+    src: "{{filesdir}}/xfce4-terminalrc"

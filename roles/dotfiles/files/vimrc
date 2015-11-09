@@ -1,0 +1,61 @@
+""" Remember :so % to source current file
+
+""" VUNDLE
+""" From https://github.com/gmarik/Vundle.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'https://github.com/klen/python-mode.git'
+Plugin 'https://github.com/chase/vim-ansible-yaml.git'
+Plugin 'https://github.com/altercation/vim-colors-solarized.git' 
+Plugin 'https://github.com/DrSpatula/vim-buddy'
+Plugin 'https://github.com/ianzd/burnttoast256'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+""" END VUNDLE
+
+syntax enable
+set background=dark
+
+" Don't pause for input if the colorscheme doesn't exist, otherwise ansible
+" won't be able to run PluginInstall unattended after installing Vundle
+silent! colorscheme burnttoast256
+
+set guioptions="agiLrt"
+set ruler
+set number
+
+"set guifont=Source\ Code\ Pro\ 10
+set guifont=Source\ Code\ Pro\ 12
+
+" .md are markdown, not module-2... 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+let mapleader = ","
+
+" from https://stackoverflow.com/questions/15300151/disable-pylint-for-a-single-file-in-vim
+let g:pymode_lint_write = 0       "turn off running pylint on file save
+nnoremap <leader>p :PymodeLint<cr>    
