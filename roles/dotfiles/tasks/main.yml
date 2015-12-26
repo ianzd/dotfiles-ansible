@@ -13,4 +13,8 @@
   file: path={{item.key}} state=link src={{item.value.src}}
   with_dict: dotfiles_base
 
+- name: hard link some dotfiles
+  file: path={{item.key}} state=hard src={{item.value.src}}
+  with_dict: dotfiles_base_hl
+
 - include: vim.yml
