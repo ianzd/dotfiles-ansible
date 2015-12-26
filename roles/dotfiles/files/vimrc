@@ -58,4 +58,7 @@ let mapleader = ","
 
 " from https://stackoverflow.com/questions/15300151/disable-pylint-for-a-single-file-in-vim
 let g:pymode_lint_write = 0       "turn off running pylint on file save
+
+let g:pymode_trim_whitespaces = 0
+
 nnoremap <leader>p :PymodeLint<cr>    
