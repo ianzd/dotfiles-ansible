@@ -1,1 +1,2 @@
 scale=10
+print "###\n","scale=",scale,"\n###\n\n"
