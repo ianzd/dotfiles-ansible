@@ -1,7 +1,7 @@
 # Ansible Playbook for dotfiles
 
 *Run as:*
-    ansible-playbook -i hosts top.yml
+run_me.sh
 
 - Creates symlink for dotfiles to this working copy of the repo
 - For vim, after installing Vundle and symlinking ~/.vimrc, will run Vundle
