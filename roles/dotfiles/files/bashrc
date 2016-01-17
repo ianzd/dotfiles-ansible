@@ -36,6 +36,12 @@ if [ -x /usr/bin/vagrant ]; then
   alias v="vagrant"
 fi
 
+## for virtualenvwrapper
 if [ -x /usr/bin/virtualenvwrapper.sh ]; then
+	export WORKON_HOME=~/virtualenvs
+	if [ ! -d $WORKON_HOME ]; then
+		mkdir $WORKON_HOME
+	fi
 	. /usr/bin/virtualenvwrapper.sh
 fi
+
