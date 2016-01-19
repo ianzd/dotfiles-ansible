@@ -10,6 +10,6 @@ dotfiles_base:
 
 # xfce4-terminal doesn't like symlinked config and will replace the symlink
 # with  regular file. Hard link it instead.
-dotfiles_base_hl:
-  ~/.config/xfce4/terminal/terminalrc:
-    src: "{{filesdir}}/xfce4-terminalrc"
+#dotfiles_base_hl:
+#  ~/.config/xfce4/terminal/terminalrc:
+#    src: "{{filesdir}}/xfce4-terminalrc"
