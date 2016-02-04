@@ -15,6 +15,7 @@ export EDITOR=vim
 alias ga='git add'
 alias gc='git commit -v'
 alias gca='git commit -av'
+alias gcammm='git commit -av -m'.''
 alias gd='git diff'
 alias gp='git push'
 alias gs='git status'
