@@ -19,6 +19,7 @@ Plugin 'https://github.com/chase/vim-ansible-yaml.git'
 Plugin 'https://github.com/altercation/vim-colors-solarized.git' 
 Plugin 'https://github.com/DrSpatula/vim-buddy'
 Plugin 'https://github.com/ianzd/burnttoast256'
+Plugin 'https://github.com/junegunn/fzf'
 
 
 " All of your Plugins must be added before the following line
