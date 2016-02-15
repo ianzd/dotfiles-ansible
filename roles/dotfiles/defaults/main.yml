@@ -7,6 +7,10 @@ dotfiles_base:
     src: "{{filesdir}}/bashrc"
   ~/.bcrc:
     src: "{{filesdir}}/bcrc"
+  ~/.xmonad/xmonad.hs:
+    src: "{{filesdir}}/xmonad.hs"
+  ~/.xmonad/xmobarrc:
+    src: "{{filesdir}}/xmobarrc"
 
 # xfce4-terminal doesn't like symlinked config and will replace the symlink
 # with  regular file. Hard link it instead.
