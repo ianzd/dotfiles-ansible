@@ -1,0 +1,14 @@
+---
+
+- name: create extensions dir, if it doens't already exist
+  tags: gnome-annoyances
+  file:
+    path: ~/.local/share/gnome-shell/extensions
+    state: directory
+
+- name: grab the disable-workspace-switcher-popup extension
+  tags: gnome-annoyances
+  git:
+    repo: https://github.com/windsorschmidt/disable-workspace-switcher-popup.git
+    dest: ~/.local/share/gnome-shell/extensions/disable-workspace-switcher@github.com
+
