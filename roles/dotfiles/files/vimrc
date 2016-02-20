@@ -50,8 +50,9 @@ set guioptions="agiLrt"
 set ruler
 set number
 
-set guifont=Source\ Code\ Pro\ 10
+"set guifont=Source\ Code\ Pro\ 10
 "set guifont=Source\ Code\ Pro\ 12
+set guifont=Inconsolata\ Medium\ 11
 
 " .md are markdown, not module-2... 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
