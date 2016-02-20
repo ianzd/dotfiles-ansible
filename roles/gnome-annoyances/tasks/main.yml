@@ -6,9 +6,9 @@
     path: ~/.local/share/gnome-shell/extensions
     state: directory
 
-- name: grab the disable-workspace-switcher-popup extension
+- name: grab the disable-workspace-switcher-popup extension. Restart gnome-shell (alt-F2, r), then enable in gnome-tweak-tool
   tags: gnome-annoyances
   git:
     repo: https://github.com/windsorschmidt/disable-workspace-switcher-popup.git
-    dest: ~/.local/share/gnome-shell/extensions/disable-workspace-switcher@github.com
+    dest: ~/.local/share/gnome-shell/extensions/disable-workspace-switcher-popup@github.com
 
