@@ -30,6 +30,10 @@ alias uwatgwx='curl -s http://www.atmos.washington.edu/cgi-bin/latest_uw.cgi | a
 # Set SSH_AUTH_SOCK to point to the most recently started ssh-agent process
 alias reset-authsock='export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name 'agent*' -user $USER | head -n1)'
 
+# For pymodoro
+alias pomo='touch ~/.pomodoro_session'
+alias pomoc='rm ~/.pomodoro_session'
+
 alias bc="bc ~/.bcrc"
 alias ll="ls -l"
 
