@@ -65,3 +65,12 @@ let g:pymode_lint_write = 0       "turn off running pylint on file save
 let g:pymode_trim_whitespaces = 0
 
 nnoremap <leader>p :PymodeLint<cr>    
+
+" toggle invisibles
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+set list
+
+
+" don't complain if switching buffers creates a hidden buffer
+set hidden
