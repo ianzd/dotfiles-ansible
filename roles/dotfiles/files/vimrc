@@ -21,6 +21,8 @@ Plugin 'https://github.com/DrSpatula/vim-buddy'
 Plugin 'https://github.com/ianzd/burnttoast256'
 Plugin 'https://github.com/junegunn/fzf'
 Plugin 'https://github.com/tpope/vim-commentary'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 
 " All of your Plugins must be added before the following line
@@ -65,3 +67,6 @@ let g:pymode_lint_write = 0       "turn off running pylint on file save
 let g:pymode_trim_whitespaces = 0
 
 nnoremap <leader>p :PymodeLint<cr>    
+
+" Enable airline statusline, even when there's no split
+set laststatus=2
