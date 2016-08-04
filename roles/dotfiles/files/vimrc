@@ -23,6 +23,7 @@ Plugin 'https://github.com/junegunn/fzf'
 Plugin 'https://github.com/tpope/vim-commentary'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'https://github.com/tpope/vim-fugitive'
 
 
 " All of your Plugins must be added before the following line
