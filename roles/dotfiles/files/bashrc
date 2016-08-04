@@ -39,7 +39,6 @@ alias ll="ls -l"
 
 # Various repos
 alias notes="cd ~/gp/notes"
-alias gp="cd ~/gp"
 
 if [ -x /usr/bin/vagrant ]; then
   alias v="vagrant"
