@@ -21,6 +21,9 @@ Plugin 'https://github.com/DrSpatula/vim-buddy'
 Plugin 'https://github.com/ianzd/burnttoast256'
 Plugin 'https://github.com/junegunn/fzf'
 Plugin 'https://github.com/tpope/vim-commentary'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'https://github.com/tpope/vim-fugitive'
 
 
 " All of your Plugins must be added before the following line
@@ -74,3 +77,5 @@ set list
 
 " don't complain if switching buffers creates a hidden buffer
 set hidden
+" Enable airline statusline, even when there's no split
+set laststatus=2
