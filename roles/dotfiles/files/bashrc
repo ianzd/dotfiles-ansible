@@ -53,3 +53,21 @@ if [ -x /usr/bin/virtualenvwrapper.sh ]; then
 	. /usr/bin/virtualenvwrapper.sh
 fi
 
+## Adapted from 
+## Using shred instead of rm
+function screen_send_to_copy_mode() {
+  tmp=$(mktemp) || exit
+    cat > "$tmp" &&
+	        screen -X readbuf "$tmp"
+      ret=$?
+        (sleep 2; shred -u "$tmp")&
+	  exit "$ret"
+}
+
+### Call pass, remove newline, send to screen copybuffer
+function spass() {
+	pass $1 | tr -d '\n' | screen_send_to_copy_mode
+}
+source  /usr/share/bash-completion/completions/pass
+complete -o filenames -o nospace -F _pass spass
+
