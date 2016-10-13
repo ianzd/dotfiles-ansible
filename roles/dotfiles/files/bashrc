@@ -69,6 +69,8 @@ function spass() {
 	pass $1 | tr -d '\n' | screen_send_to_copy_mode
 }
 ## Get the same completion behavior when using spass
-source  /usr/share/bash-completion/completions/pass
-complete -o filenames -o nospace -F _pass spass
+if [ -f /usr/share/bash-completion/completions/pass ]; then
+	source  /usr/share/bash-completion/completions/pass
+	complete -o filenames -o nospace -F _pass spass
+fi
 
