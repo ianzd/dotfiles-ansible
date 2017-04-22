@@ -41,6 +41,7 @@ alias ll="ls -l"
 
 # Various repos
 alias notes="cd ~/gp/notes"
+alias ntj="cd ~/gp/notes/travel/japan-2017"
 
 if [ -x /usr/bin/vagrant ]; then
   alias v="vagrant"
