@@ -77,5 +77,7 @@ if [ -f /usr/share/bash-completion/completions/pass ]; then
 	complete -o filenames -o nospace -F _pass spass
 fi
 
-. /usr/share/fzf/shell/key-bindings.bash
+if [ -f /usr/share/fzf/shell/key-bindings.bash ]; then
+	. /usr/share/fzf/shell/key-bindings.bash
+fi
 

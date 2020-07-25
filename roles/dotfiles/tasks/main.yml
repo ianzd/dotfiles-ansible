@@ -9,15 +9,16 @@
   file: src=~/Downloads dest=~/dl state=link
   when: Downloads.stat.exists == True
 
-- name: create ~/.xmonad dir
-  file: path=~/.xmonad state=directory
+#- name: create ~/.xmonad dir
+#file: path=~/.xmonad state=directory
 
 - name: link some dotfiles
   file: path={{item.key}} state=link src={{item.value.src}}
-  with_dict: dotfiles_base
+  with_dict: "{{ dotfiles_base }}"
 
 #- name: hard link some dotfiles
 #  file: path={{item.key}} state=hard src={{item.value.src}}
 #  with_dict: dotfiles_base_hl
 
-- include: vim.yml
+# Leave vim alone for now
+#- include: vim.yml
