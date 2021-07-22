@@ -23,11 +23,11 @@ alias gp='git push'
 alias gs='git status'
 alias gu='git pull'
 
-# check git status for directories in the pwd
+# check git status for directories in the cwd
 alias gsdirs='for d in $(ls); do echo ==== $d; (cd $d; git status); done'
 
 # Get current wx obs at UW ATG
-alias uwatgwx='curl -s http://www.atmos.washington.edu/cgi-bin/latest_uw.cgi | awk '\''NR>8 && NR<14'\'''
+alias uwatgwx='curl -s https://www.atmos.washington.edu/cgi-bin/latest_uw.cgi | awk '\''NR>8 && NR<14'\'''
 
 # Set SSH_AUTH_SOCK to point to the most recently started ssh-agent process
 alias reset-authsock='export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name 'agent*' -user $USER | head -n1)'
@@ -40,7 +40,7 @@ alias bc="bc ~/.bcrc"
 alias ll="ls -l"
 
 # Various repos
-alias notes="cd ~/gp/notes"
+alias notes="cd ~/gp/pnotes"
 alias ntj="cd ~/gp/notes/travel/japan-2017"
 
 if [ -x /usr/bin/vagrant ]; then
